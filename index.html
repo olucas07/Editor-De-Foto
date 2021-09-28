@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Editor</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="estilo/estilo.css">
+</head>
+<body>
+    <h1 id="titulo">Editor de imagem</h1>
+    <div class="wrapper">
+        <div class="editor">
+            <div class="filter">
+                <label for="blur">Borrar</label>
+                <input type="range" min="0" max="5" value="0" step="0.1" id="blur">
+            </div>
+            <div class="filter">
+                <label for="contrast">Contraste</label>
+                <input type="range" min="0" max="200" value="100" id="contrast">
+            </div>
+            <div class="filter">
+                <label for="hue-rotate">Matiz</label>
+                <input type="range" min="0" max="360" value="0" id="hue-rotate">
+            </div>
+            <div class="filter">
+                <label for="sepia">Tonalidade</label>
+                <input type="range" min="0" max="100" value="0" id="sepia">
+            </div>
+            <div class="flip-buttons">
+                <div class="flip-option">
+                    <input type="radio" name="flip" id="no-flip" checked>
+                    <label for="no-flip">Original</label>
+                </div>
+                <div class="flip-option">
+                    <input type="radio" name="flip" id="flip-x">
+                    <label for="flip-x">Espelhar</label>
+                </div>
+                <div class="flip-option">
+                    <input type="radio" name="flip" id="flip-y">
+                    <label for="flip-y">Virar</label>
+                </div>
+            </div>
+        </div>
+        <div class="result">
+            <figure class="image-container">
+                <img id="chosen-image">
+            </figure>
+            <input type="file" id="upload-button" accept="Image/*">
+            <label for="upload-button">Escolha uma imagem</label>
+        </div>
+    </div>
+
+    <!-- Script -->
+    <script src="script/script.js"></script>
+</body>
+</html>
